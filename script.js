@@ -21,15 +21,26 @@ function updateName(){
 }
 
 for(let i=0;i<gridItem.length;i++){
-	if(game.getAttribute("data-game-enabled")){
 		gridItem[i].addEventListener("click",updateGame);
-		console.log(gridItem[i])
-	 }
 }
 
 function updateGame(e){
-	console.log(e.target);
-	console.log(1);
+	if(game.getAttribute("data-game-enabled")=="false"){
+		return;
+	}
+	if(e.target.innerText!=""){
+		return;
+	}
+	if(turn==1){
+	 e.target.innerText="x";
+		turn=2;
+		updateName();
+	}
+	else{
+		e.target.innerText="o";
+		turn=1;
+		updateName();
+	}
 }
 
 
