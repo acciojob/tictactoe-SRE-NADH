@@ -35,6 +35,8 @@ h1{
 	background:blue;
 	cursor:pointer;
 	margin:2px;
+	font-size:50px;
+	text-align: center;
 }
 .playername{
 	font-size:50px;

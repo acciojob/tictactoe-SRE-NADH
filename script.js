@@ -34,13 +34,12 @@ function updateGame(e){
 	if(turn==1){
 	 e.target.innerText="x";
 		turn=2;
-		updateName();
 	}
 	else{
 		e.target.innerText="o";
 		turn=1;
-		updateName();
 	}
+	updateName();
 }
 
 
