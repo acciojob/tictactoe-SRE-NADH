@@ -26,12 +26,13 @@ h1{
 }
 .game{
  	display:grid; 
-	grid-template-column: repeat(3,1fr);
-	 height: 300px;
-     width: 300px;
+	grid-template-columns: repeat(3,1fr);
+	 height: 400px;
+     width: 400px;
+	margin: 50px auto;
 }
 .game>div{
-	background_color:blue;
+	background:blue;
 	cursor:pointer;
-	font-size: 40px;
+	margin:2px;
 }
