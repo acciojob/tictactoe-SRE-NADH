@@ -17,13 +17,14 @@ function addPlayers(e) {
 	player2 = form["name2"].value;
 	turn=1;
     game.setAttribute("data-game-enabled","true");
+	game.style.display="grid";
 	updateName();
  }
 
 function updateName(){
 	let name = (turn===1?player1:player2);
 	let p = document.getElementsByClassName("playername")[0];
-	p.innerText = `${name} you are up`
+	p.innerText = `${name}, you are up`
 }
 
 for(let i=0;i<gridItem.length;i++){
@@ -58,23 +59,23 @@ function fillArray(id){
     let p = document.getElementsByClassName("playername")[0];
 	 for(let i = 0 ; i < 3; i++) {
         if(arr[i][0] && arr[i][0]=== arr[i][1] && arr[i][1] === arr[i][2]) {
-        p.innerText = `${player1} won`;
+        p.innerText = `${player1}, congradulation you won!`;
 			return;
         }
         if(arr[0][i] && arr[0][i] === arr[1][i] && arr[1][i] === arr[2][i]){
             // i th column is matched
-			 p.innerText = `${player1} won`;
+			 p.innerText = `${player1}, congradulation you won!`;
 			return;
         }
     }
 	 if(arr[0][0] && arr[0][0] === arr[1][1] && arr[1][1] === arr[2][2]) {
         // main diagonal matched
-		  p.innerText = `${player1} won`;
+		  p.innerText = `${player1}, congradulation you won!`;
 		 return;
     }
     if(arr[0][2] && arr[0][2] === arr[1][1] && arr[1][1] === arr[2][0]){
         // cross diagonal is a match now .
-		 p.innerText = `${player1} won`;
+		 p.innerText = `${player1}, congradulation you won!`;
 		return
     }
 }

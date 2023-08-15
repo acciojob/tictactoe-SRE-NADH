@@ -25,11 +25,11 @@ h1{
 	font-size:40px;
 }
 .game{
- 	display:grid; 
 	grid-template-columns: repeat(3,1fr);
 	 height: 400px;
      width: 400px;
 	margin: 50px auto;
+	display:none;
 }
 .game>div{
 	background:blue;
