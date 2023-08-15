@@ -60,22 +60,26 @@ function fillArray(id){
 	 for(let i = 0 ; i < 3; i++) {
         if(arr[i][0] && arr[i][0]=== arr[i][1] && arr[i][1] === arr[i][2]) {
         p.innerText = `${player1}, congradulation you won!`;
+			 game.setAttribute("data-game-enabled","false");
 			return;
         }
         if(arr[0][i] && arr[0][i] === arr[1][i] && arr[1][i] === arr[2][i]){
             // i th column is matched
 			 p.innerText = `${player1}, congradulation you won!`;
+			 game.setAttribute("data-game-enabled","false");
 			return;
         }
     }
 	 if(arr[0][0] && arr[0][0] === arr[1][1] && arr[1][1] === arr[2][2]) {
         // main diagonal matched
 		  p.innerText = `${player1}, congradulation you won!`;
+		  game.setAttribute("data-game-enabled","false");
 		 return;
     }
     if(arr[0][2] && arr[0][2] === arr[1][1] && arr[1][1] === arr[2][0]){
         // cross diagonal is a match now .
 		 p.innerText = `${player1}, congradulation you won!`;
+		  game.setAttribute("data-game-enabled","false");
 		return
     }
 }
